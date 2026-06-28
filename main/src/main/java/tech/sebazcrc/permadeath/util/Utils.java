@@ -3,7 +3,7 @@ package tech.sebazcrc.permadeath.util;
 import org.bukkit.entity.EntityType;
 
 public class Utils {
-    public static final String RESOURCE_PACK_LINK = "https://www.dropbox.com/s/h3v77ga72l9vhpg/PermaDeathCore%20RP%20v1.2.zip?dl=1";
+    public static final String RESOURCE_PACK_LINK = "https://www.dropbox.com/scl/fi/j8axxji3want4yih1hh8w/InfernalHardcoreRP.zip?rlkey=ooigohddscnudho8dqaww6bj6&st=3mbtsci0&dl=1";
     public static final String DISCORD_LINK = "https://discord.gg/w58wzrcJU8";
     public static final int RESOURCE_ID = 112343;
     public static final String SPIGOT_LINK = "https://www.spigotmc.org/resources/permadeath-%E2%98%A0%EF%B8%8F.112343/";

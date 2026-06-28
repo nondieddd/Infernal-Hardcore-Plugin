@@ -40,7 +40,7 @@ public class PDCCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         //Comando por argumentos
-        if (command.getName().equalsIgnoreCase("pdc")) {
+        if (command.getName().equalsIgnoreCase("infernalcore")) {
 
             World world = instance.world;
             World endWorld = instance.endWorld;
@@ -109,7 +109,7 @@ public class PDCCommand implements CommandExecutor {
                     if (args.length == 1) {
 
                         sender.sendMessage(TextUtils.format("&ePor favor ingresa un idioma."));
-                        p.sendMessage(TextUtils.format("&7Ejemplo: &b/pdc idioma es"));
+                        p.sendMessage(TextUtils.format("&7Ejemplo: &b/infernalcore idioma es"));
                         p.sendMessage(TextUtils.format("&eArgumentos válidos: &b<es, en>"));
                         return false;
                     }
@@ -156,7 +156,7 @@ public class PDCCommand implements CommandExecutor {
                     if (args.length <= 1) {
 
                         player.sendMessage(TextUtils.format("&cNecesitas agregar un día"));
-                        player.sendMessage(TextUtils.format("&eEjemplo: &7/pdc cambiarDia <día>"));
+                        player.sendMessage(TextUtils.format("&eEjemplo: &7/infernalcore cambiarDia <día>"));
                         return false;
                     }
 
@@ -189,9 +189,9 @@ public class PDCCommand implements CommandExecutor {
                     if (args.length == 1) {
                         player.sendMessage(TextUtils.format(instance.prefix + "&eEste comando te servirá en nuestro soporte si tienes problemas"));
                         player.sendMessage(TextUtils.format("&b&nSub comandos:"));
-                        player.sendMessage(TextUtils.format("&7/pdc debug info&f&l- &eInformación importante acerca del plugin, suele usarse en soporte."));
-                        player.sendMessage(TextUtils.format("&7/pdc debug generate_beginning&f&l- &eSi tienes problemas con The Beginning puedes generarlo manualmente."));
-                        //player.sendMessage(instance.format("&7/pdc debug &f&l- &e."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore debug info&f&l- &eInformación importante acerca del plugin, suele usarse en soporte."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore debug generate_beginning&f&l- &eSi tienes problemas con The Beginning puedes generarlo manualmente."));
+                        //player.sendMessage(instance.format("&7/infernalcore debug &f&l- &e."));
                         return false;
                     }
 
@@ -206,7 +206,6 @@ public class PDCCommand implements CommandExecutor {
                         player.sendMessage(TextUtils.format("&fMundo de overworld: &a" + instance.world.getName()));
                         player.sendMessage(TextUtils.format("&fMundo de end: &a" + instance.endWorld.getName()));
                         player.sendMessage(TextUtils.format(""));
-                        player.sendMessage(TextUtils.format("&eEsta información es brindada en nuestro discord, &f&nhttps://discord.gg/w58wzrcJU8"));
 
                         //player.sendMessage(instance.format("&"));
 
@@ -360,9 +359,6 @@ public class PDCCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.GRAY + "- Versión: " + ChatColor.GREEN + "PermaDeathCore v" + instance.getDescription().getVersion());
                     player.sendMessage(ChatColor.GRAY + "- Dificultades: " + ChatColor.GREEN + "Soportado de día 1 a día 60");
                     player.sendMessage(ChatColor.GRAY + "- Autor: " + ChatColor.GREEN + "Equipo de InfernalCore (Desarrollador principal: SebazCRC)");
-                } else if (args[0].equalsIgnoreCase("discord")) {
-                    player.sendMessage(instance.prefix + ChatColor.BLUE + "https://discord.gg/w58wzrcJU8 | https://discord.gg/infernalcore");
-
                 } else if (args[0].equalsIgnoreCase("cambios")) {
 
                     player.sendMessage(TextUtils.format("&eEste plugin contiene &c&lTODOS &r&elos cambios de PermaDeath."));
@@ -379,9 +375,9 @@ public class PDCCommand implements CommandExecutor {
 
                     if (args.length == 1) {
                         player.sendMessage(TextUtils.format(instance.prefix + "&cLista de comandos para The Beginning"));
-                        player.sendMessage(TextUtils.format("&7/pdc beginning bendicion <jugador> &f&l- &cOtorga la bendición de The Beginning a un jugador."));
-                        player.sendMessage(TextUtils.format("&7/pdc beginning maldicion <jugador> &f&l- &cOtorga la maldición de The Beginning a un jugador."));
-                        //player.sendMessage(instance.format("&7/pdc speedrun &f&l- &c."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore beginning bendicion <jugador> &f&l- &cOtorga la bendición de The Beginning a un jugador."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore beginning maldicion <jugador> &f&l- &cOtorga la maldición de The Beginning a un jugador."));
+                        //player.sendMessage(instance.format("&7/infernalcore speedrun &f&l- &c."));
                         return false;
                     }
 
@@ -419,10 +415,10 @@ public class PDCCommand implements CommandExecutor {
 
                     if (args.length == 1) {
                         player.sendMessage(TextUtils.format(instance.prefix + "&cLista de comandos para el modo SpeedRun"));
-                        player.sendMessage(TextUtils.format("&7/pdc speedrun toggle &f&l- &cActiva o desactiva el modo SpeedRun."));
-                        player.sendMessage(TextUtils.format("&7/pdc speedrun tiempo &f&l- &cObtén el tiempo de juego total."));
-                        player.sendMessage(TextUtils.format("&7/pdc speedrun reset &f&l- &cReinicia el tiempo."));
-                        //player.sendMessage(instance.format("&7/pdc speedrun &f&l- &c."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore speedrun toggle &f&l- &cActiva o desactiva el modo SpeedRun."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore speedrun tiempo &f&l- &cObtén el tiempo de juego total."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore speedrun reset &f&l- &cReinicia el tiempo."));
+                        //player.sendMessage(instance.format("&7/infernalcore speedrun &f&l- &c."));
                         return false;
                     }
 
@@ -436,9 +432,9 @@ public class PDCCommand implements CommandExecutor {
                         instance.setPlayTime(0);
                     } else {
                         player.sendMessage(TextUtils.format(instance.prefix + "&cLista de comandos para el modo SpeedRun"));
-                        player.sendMessage(TextUtils.format("&7/pdc speedrun toggle &f&l- &cActiva o desactiva el modo SpeedRun."));
-                        player.sendMessage(TextUtils.format("&7/pdc speedrun tiempo &f&l- &cObtén el tiempo de juego total."));
-                        player.sendMessage(TextUtils.format("&7/pdc speedrun reset &f&l- &cReinicia el tiempo."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore speedrun toggle &f&l- &cActiva o desactiva el modo SpeedRun."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore speedrun tiempo &f&l- &cObtén el tiempo de juego total."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore speedrun reset &f&l- &cReinicia el tiempo."));
                     }
 
                 } else if (args[0].equalsIgnoreCase("event")) {
@@ -451,7 +447,7 @@ public class PDCCommand implements CommandExecutor {
 
                     if (args.length == 1) {
 
-                        player.sendMessage(TextUtils.format("&cPor favor introduce un evento, ejemplo: &e/pdc event shulkershell"));
+                        player.sendMessage(TextUtils.format("&cPor favor introduce un evento, ejemplo: &e/infernalcore event shulkershell"));
                         return false;
                     }
 
@@ -503,7 +499,7 @@ public class PDCCommand implements CommandExecutor {
                     if (args.length == 1) {
 
                         player.sendMessage(TextUtils.format("&eDebes introducir una palabra clave."));
-                        player.sendMessage(TextUtils.format("&eEjemplo: &7/pdc locate beginning"));
+                        player.sendMessage(TextUtils.format("&eEjemplo: &7/infernalcore locate beginning"));
                         return false;
                     }
 
@@ -668,8 +664,8 @@ public class PDCCommand implements CommandExecutor {
 
                     if (args.length == 1) {
                         player.sendMessage(TextUtils.format("&cLista de comandos disponibles para el sistema Anti-AFK"));
-                        player.sendMessage(TextUtils.format("&7/pdc afk unban <jugador> &f&l- &cRevoca un baneo por AFK."));
-                        player.sendMessage(TextUtils.format("&7/pdc afk bypass <add/remove> <jugador> &f&l- &cAgrega o elimina un jugador a la lista de personas inmunes."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore afk unban <jugador> &f&l- &cRevoca un baneo por AFK."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore afk bypass <add/remove> <jugador> &f&l- &cAgrega o elimina un jugador a la lista de personas inmunes."));
                         return false;
                     }
 
@@ -755,8 +751,8 @@ public class PDCCommand implements CommandExecutor {
 
                     if (args.length <= 2) {
                         player.sendMessage(TextUtils.format("&cLista de comandos disponibles para la tormenta."));
-                        player.sendMessage(TextUtils.format("&7/pdc storm removeHours <horas> &f&l- &cElimina cantidad de horas de la tormenta."));
-                        player.sendMessage(TextUtils.format("&7/pdc storm addHours <horas> &f&l- &cAgrega cantidad de horas a la tormenta."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore storm removeHours <horas> &f&l- &cElimina cantidad de horas de la tormenta."));
+                        player.sendMessage(TextUtils.format("&7/infernalcore storm addHours <horas> &f&l- &cAgrega cantidad de horas a la tormenta."));
                         return false;
                     }
 
@@ -819,35 +815,34 @@ public class PDCCommand implements CommandExecutor {
     private void sendHelp(CommandSender sender) {
 
         sender.sendMessage(instance.prefix + ChatColor.RED + "Comandos disponibles:");
-        sender.sendMessage(ChatColor.RED + "/pdc idioma <es, en>" + ChatColor.GRAY + ChatColor.ITALIC + "(Cambia tu idioma)");
-        sender.sendMessage(ChatColor.RED + "/pdc dias " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra el día en el que está el plugin)");
-        sender.sendMessage(ChatColor.RED + "/pdc duracion " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra la duración de la tormenta)");
-        sender.sendMessage(ChatColor.RED + "/pdc cambios " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra los cambios de dificultad disponibles)");
+        sender.sendMessage(ChatColor.RED + "/infernalcore idioma <es, en>" + ChatColor.GRAY + ChatColor.ITALIC + "(Cambia tu idioma)");
+        sender.sendMessage(ChatColor.RED + "/infernalcore dias " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra el día en el que está el plugin)");
+        sender.sendMessage(ChatColor.RED + "/infernalcore duracion " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra la duración de la tormenta)");
+        sender.sendMessage(ChatColor.RED + "/infernalcore cambios " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra los cambios de dificultad disponibles)");
 
         if (sender instanceof Player) {
 
-            sender.sendMessage(ChatColor.RED + "/pdc mensaje <mensaje> " + ChatColor.GRAY + ChatColor.ITALIC + "(Cambia tu mensaje de muerte)");
-            sender.sendMessage(ChatColor.RED + "/pdc awake " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra el tiempo despierto)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore mensaje <mensaje> " + ChatColor.GRAY + ChatColor.ITALIC + "(Cambia tu mensaje de muerte)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore awake " + ChatColor.GRAY + ChatColor.ITALIC + "(Muestra el tiempo despierto)");
         }
-        sender.sendMessage(ChatColor.RED + "/pdc info " + ChatColor.GRAY + ChatColor.ITALIC + "(Información general)");
-        sender.sendMessage(ChatColor.RED + "/pdc discord " + ChatColor.GRAY + ChatColor.ITALIC + "(Discord oficial del plugin)");
+        sender.sendMessage(ChatColor.RED + "/infernalcore info " + ChatColor.GRAY + ChatColor.ITALIC + "(Información general)");
 
         if (sender.hasPermission("permadeathcore.admin")) {
 
             sender.sendMessage("");
             sender.sendMessage(instance.prefix + ChatColor.RED + "Comandos de administrador:");
-            sender.sendMessage(ChatColor.RED + "/pdc debug " + ChatColor.GRAY + ChatColor.ITALIC + "(Información importante para el soporte)");
-            sender.sendMessage(ChatColor.RED + "/pdc reload " + ChatColor.GRAY + ChatColor.ITALIC + "(Recarga el archivo config.yml)");
-            sender.sendMessage(ChatColor.RED + "/pdc afk " + ChatColor.GRAY + ChatColor.ITALIC + "(Administra el sistema Anti-AFK)");
-            sender.sendMessage(ChatColor.RED + "/pdc storm " + ChatColor.GRAY + ChatColor.ITALIC + "(Administra la tormenta)");
-            sender.sendMessage(ChatColor.RED + "/pdc cambiarDia <dia> " + ChatColor.GRAY + ChatColor.ITALIC + "(Cambia el día actual, pd: puede que requiera un reinicio)");
-            sender.sendMessage(ChatColor.RED + "/pdc speedrun " + ChatColor.GRAY + ChatColor.ITALIC + "(Comandos del modo SpeedRun, cada día es una hora)");
-            sender.sendMessage(ChatColor.RED + "/pdc beginning " + ChatColor.GRAY + ChatColor.ITALIC + "(Comandos de TheBeginning)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore debug " + ChatColor.GRAY + ChatColor.ITALIC + "(Información importante para el soporte)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore reload " + ChatColor.GRAY + ChatColor.ITALIC + "(Recarga el archivo config.yml)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore afk " + ChatColor.GRAY + ChatColor.ITALIC + "(Administra el sistema Anti-AFK)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore storm " + ChatColor.GRAY + ChatColor.ITALIC + "(Administra la tormenta)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore cambiarDia <dia> " + ChatColor.GRAY + ChatColor.ITALIC + "(Cambia el día actual, pd: puede que requiera un reinicio)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore speedrun " + ChatColor.GRAY + ChatColor.ITALIC + "(Comandos del modo SpeedRun, cada día es una hora)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore beginning " + ChatColor.GRAY + ChatColor.ITALIC + "(Comandos de TheBeginning)");
             if (sender instanceof Player) {
-                sender.sendMessage(ChatColor.RED + "/pdc give <medalla, netheriteArmor, infernalArmor, infernalBlock, netheriteTools> " + ChatColor.GRAY + ChatColor.ITALIC + "(Obtén ítems especiales de Permadeath)");
+                sender.sendMessage(ChatColor.RED + "/infernalcore give <medalla, netheriteArmor, infernalArmor, infernalBlock, netheriteTools> " + ChatColor.GRAY + ChatColor.ITALIC + "(Obtén ítems especiales de Permadeath)");
             }
-            sender.sendMessage(ChatColor.RED + "/pdc event <shulkershell, lifeorb> " + ChatColor.GRAY + ChatColor.ITALIC + "(Comienza un evento)");
-            sender.sendMessage(ChatColor.RED + "/pdc locate <beginning> " + ChatColor.GRAY + ChatColor.ITALIC + "(Localiza el portal a The Beginning)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore event <shulkershell, lifeorb> " + ChatColor.GRAY + ChatColor.ITALIC + "(Comienza un evento)");
+            sender.sendMessage(ChatColor.RED + "/infernalcore locate <beginning> " + ChatColor.GRAY + ChatColor.ITALIC + "(Localiza el portal a The Beginning)");
         }
     }
 }
